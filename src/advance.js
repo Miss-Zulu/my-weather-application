@@ -6,6 +6,10 @@ function refreshData(response) {
 
   let cityElement = document.querySelector("#place");
   cityElement.innerHTML = response.data.city;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
+  let humidityElement = document.querySelector("#humdidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
 }
 
 function searchCity(city) {
