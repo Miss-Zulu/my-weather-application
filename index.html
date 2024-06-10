@@ -15,11 +15,12 @@
   <body>
     <div class="info">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
+            id="search-button"
             class="input"
           />
           <input type="submit" value="search" class="button" />
@@ -28,19 +29,19 @@
       <main>
         <div class="data">
           <div>
-            <h1 class="city">Middelburg</h1>
+            <h1 class="city" id="place">Middelburg</h1>
             <p class="details">
               Monday 10:00 Sunny <br />Precipitation: 0%<br />
               Humidity: <strong>40%</strong><br />
-              Wind:<strong> 8 km/h</Wind:strong>
+              Wind:<strong> 8 km/h</strong>
             </p>
           </div>
 
           <div class="temperature">
-            <div class="emoji">☀️</div> 
+            <div class="emoji">☀️</div>
             <div class="value">13</div>
             <div class="unit">°C</div>
-            </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -54,5 +55,6 @@
         >
       </footer>
     </div>
+    <script src="src/advance.js"></script>
   </body>
 </html>
