@@ -15,6 +15,9 @@ function refreshData(response) {
 
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formateDate(date);
+
+  let emojiElement = document.querySelector("#emoji");
+  emojiElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 function formateDate(date) {
   let minutes = date.getMinutes();
