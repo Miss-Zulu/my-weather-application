@@ -7,8 +7,33 @@ function refreshData(response) {
   cityElement.innerHTML = response.data.city;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
-  let humidityElement = document.querySelector("#humdidity");
-  humidityElement.innerHTML = response.data.temperature.humidity;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  let windSpeedElement = document.querySelector("#wind");
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  let timeElement = document.querySelector("#time");
+
+  let date = new Date(response.data.time * 1000);
+  timeElement.innerHTML = formateDate(date);
+}
+function formateDate(date) {
+  let minutes = date.getMinutes();
+  let hour = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thurday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hour}:${minutes}`;
 }
 
 function searchCity(city) {
