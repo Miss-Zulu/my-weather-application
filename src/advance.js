@@ -1,7 +1,6 @@
 function refreshData(response) {
   let temperatureElement = document.querySelector("#feel");
   let temperature = response.data.temperature.current;
-
   temperatureElement.innerHTML = Math.round(temperature);
 
   let cityElement = document.querySelector("#place");
@@ -27,3 +26,4 @@ function handleSearch(event) {
 }
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
+searchCity("Middelburg");
