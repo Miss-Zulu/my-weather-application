@@ -82,17 +82,3 @@ footer {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
 }
-.forecast {
-  margin-top: 10px;
-  text-align: left;
-}
-.col {
-  font-size: 16px;
-  color: black;
-}
-strong {
-  color: #f65282;
-}
-.forecast-temp {
-  font-size: 18px;
-}

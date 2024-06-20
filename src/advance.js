@@ -55,3 +55,28 @@ function handleSearch(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 searchCity("Middelburg");
+
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-day">
+        <span class="weather-forecast-date">${day}</span>
+        <div class="weather-forecast-icon">🌤️</div>
+        <span class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </span>
+          <span class="weather-forecast-temperature">9º</span>
+        </span>
+      </span>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
